@@ -1,0 +1,27 @@
+Relatório Gerado em 2019-03-04 21-08-52.405100
+Estruturas: Arranjo Retangular, Arranjo Circular
+
+
+.:BANDAS DE SINTONIA
+-> Arranjo Retangular
+Início da Banda | Fim da Banda | Frequência com Menor S11 | Menor S11
+24.109999       | 24.709999    | 24.379999                | -13.029402
+27.440001       | 30.260000    | 28.039999                | -35.638251
+35.660000       | 36.110001    | 35.869999                | -14.117041
+41.299999       | 42.230000    | 41.750000                | -15.149550
+
+-> Arranjo Circular
+Início da Banda | Fim da Banda | Frequência com Menor S11 | Menor S11
+26.990000       | 29.379999    | 28.020000                | -37.729823
+
+
+.:S11 em 28.000000 GHz
+-> Arranjo Retangular: -33.417769
+-> Arranjo Circular: -37.278853
+
+
+.:S11 em 25.000000 GHz
+-> Arranjo Retangular: -6.930565
+-> Arranjo Circular: -1.568264
+
+
