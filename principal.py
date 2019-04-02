@@ -13,7 +13,7 @@ arquivos = ["S11.txt", "S11.txt"]
 
 estruturas = []
 for i in range(len(nomes)):
-    estruturas.append(estrutura.Estrutura(diretorios[i], nomes[i], arquivos[i]))
+    estruturas.append(estrutura.Estrutura(diretorios[i]+"/"+arquivos[i], nomes[i]))
 #=============================================================================================
 
 #Iniciar Resultados
