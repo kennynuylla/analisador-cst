@@ -1,13 +1,13 @@
 class Estrutura:
 
-    def __init__(self, diretorio, nome): #O diretório deve ser o mesmo da pasta
+    def __init__(self, diretorio, nome, arquivo): #O diretório deve ser o mesmo da pasta
         self.frequencia = []
         self.s11 = []
         self.bandas = []
         self.nome = nome
         self.diretorio = diretorio
 
-        arquivo = open("./Estruturas/"+diretorio+"/s11.txt")
+        arquivo = open(diretorio+"/"+arquivo)
         linhas = arquivo.readlines()
         linhas = linhas[2:]
         arquivo.close()

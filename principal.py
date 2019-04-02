@@ -5,14 +5,15 @@ import estrutura, resultado.texto as texto, resultado.imagem as imagem
 #Escolher as estruturas que serão lidas
 
 nomes = ["Arranjo Retangular", "Arranjo Circular"] #Nomes de apresentação
-diretorios = ["arranjo_retangular", "arranjo_circular"] #Diretórios
+diretorios = ["./Estruturas/arranjo_retangular", "./Estruturas/arranjo_circular"] #Diretórios
+arquivos = ["S11.txt", "S11.txt"]
 #===========================================================================================
 
 #Lendo Estruturas
 
 estruturas = []
 for i in range(len(nomes)):
-    estruturas.append(estrutura.Estrutura(diretorios[i], nomes[i]))
+    estruturas.append(estrutura.Estrutura(diretorios[i], nomes[i], arquivos[i]))
 #=============================================================================================
 
 #Iniciar Resultados
