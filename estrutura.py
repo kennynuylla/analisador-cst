@@ -24,17 +24,26 @@ class Estrutura:
         temp = {}
         menor_s11 = 0
         frequencia_menor_s11 = 0
-        for i in range(len(self.frequencia)):
+        total_frequencias = len(self.frequencia)
+        for i in range(total_frequencias):
             if(self.s11[i] < menor_s11):
                 menor_s11 = self.s11[i]
                 frequencia_menor_s11 = self.frequencia[i]
 
             if(self.s11[i] <= -10): #Abaixo -10dB é entendido como frequência de sintonia
                 if("inicio" in temp.keys()):
-                    continue
+                    if(i == total_frequencias - 1):
+                        temp["fim"] = self.frequencia[i]
+                        temp["frequencia_menor_s11"] = frequencia_menor_s11
+                        temp["menor_s11"] = menor_s11
+                        self.bandas.append(temp)
+
+                        temp = {}
+                        menor_s11 = 0
                 else:
                     temp["inicio"] = self.frequencia[i]
-            else:
+
+            elif(self.s11[i] > -10):
                 if("inicio" in temp.keys()):
                     temp["fim"] = self.frequencia[i]
                     temp["frequencia_menor_s11"] = frequencia_menor_s11
@@ -48,7 +57,7 @@ class Estrutura:
         frequencia_inicial = self.frequencia[0]
         stepsize = self.frequencia[1] - self.frequencia[0]
 
-        return round((frequencia - frequencia_inicial)/stepsize)
+        return int(round((frequencia - frequencia_inicial)/stepsize))
 
     def obter_s11(self, frequencia):
         indice = self.retornar_indice(frequencia)
